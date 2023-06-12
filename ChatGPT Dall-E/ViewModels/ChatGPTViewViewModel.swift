@@ -18,8 +18,8 @@
         
         @Published var headers = [
             "content-type": "application/json",
-            "X-RapidAPI-Key": "a57cfb6e53msha7d93f2697beb61p158252jsncbcf2648195a",
-            "X-RapidAPI-Host": "chatgpt53.p.rapidapi.com"
+            "X-RapidAPI-Key": Constants.apiKey,    // your api key
+            "X-RapidAPI-Host": Constants.baseUrl   // your base url
         ]
         
         func sendInitialMessage() {
@@ -61,7 +61,7 @@
                 
                 let postData = try? JSONSerialization.data(withJSONObject: parameters, options: [])
                 
-                guard let url = URL(string: "https://chatgpt53.p.rapidapi.com/") else {
+                guard let url = URL(string: Constants.baseUrl) else {
                     return
                 }
                 
