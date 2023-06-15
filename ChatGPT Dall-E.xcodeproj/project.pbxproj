@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C55FCAB2A3B3F93002B319C /* DallEMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55FCAA2A3B3F93002B319C /* DallEMessageView.swift */; };
+		2C55FCAF2A3B4018002B319C /* PromptMakerViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55FCAE2A3B4018002B319C /* PromptMakerViewViewModel.swift */; };
+		2C55FCB12A3B443F002B319C /* PromptMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55FCB02A3B443F002B319C /* PromptMakerView.swift */; };
+		2C789E1A2A3A28B2006E8E5B /* ChatLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C789E192A3A28B2006E8E5B /* ChatLogManager.swift */; };
 		2CACED562A34C54700FBD1C4 /* ChatGPT_Dall_EApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACED552A34C54700FBD1C4 /* ChatGPT_Dall_EApp.swift */; };
 		2CACED582A34C54700FBD1C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACED572A34C54700FBD1C4 /* ContentView.swift */; };
 		2CACED5A2A34C54700FBD1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACED592A34C54700FBD1C4 /* Assets.xcassets */; };
@@ -20,6 +24,7 @@
 		2CACED8A2A34D2D300FBD1C4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACED892A34D2D300FBD1C4 /* Message.swift */; };
 		2CACED8C2A34D48700FBD1C4 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACED8B2A34D48700FBD1C4 /* MessageView.swift */; };
 		2CACED8E2A36EAC900FBD1C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACED8D2A36EAC900FBD1C4 /* Constants.swift */; };
+		2CACED902A36F77500FBD1C4 /* DallEViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CACED8F2A36F77500FBD1C4 /* DallEViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C55FCAA2A3B3F93002B319C /* DallEMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEMessageView.swift; sourceTree = "<group>"; };
+		2C55FCAE2A3B4018002B319C /* PromptMakerViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptMakerViewViewModel.swift; sourceTree = "<group>"; };
+		2C55FCB02A3B443F002B319C /* PromptMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptMakerView.swift; sourceTree = "<group>"; };
+		2C789E082A382774006E8E5B /* How to Fetch API.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "How to Fetch API.md"; sourceTree = "<group>"; };
+		2C789E192A3A28B2006E8E5B /* ChatLogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogManager.swift; sourceTree = "<group>"; };
 		2CACED522A34C54700FBD1C4 /* ChatGPT Dall-E.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChatGPT Dall-E.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACED552A34C54700FBD1C4 /* ChatGPT_Dall_EApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT_Dall_EApp.swift; sourceTree = "<group>"; };
 		2CACED572A34C54700FBD1C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +66,7 @@
 		2CACED892A34D2D300FBD1C4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2CACED8B2A34D48700FBD1C4 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		2CACED8D2A36EAC900FBD1C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2CACED8F2A36F77500FBD1C4 /* DallEViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +158,8 @@
 				2CACED832A34C6C700FBD1C4 /* ChatGPTView.swift */,
 				2CACED8B2A34D48700FBD1C4 /* MessageView.swift */,
 				2CACED852A34C6D200FBD1C4 /* DallEView.swift */,
+				2C55FCB02A3B443F002B319C /* PromptMakerView.swift */,
+				2C55FCAA2A3B3F93002B319C /* DallEMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				2CACED872A34C82400FBD1C4 /* ChatGPTViewViewModel.swift */,
+				2C55FCAE2A3B4018002B319C /* PromptMakerViewViewModel.swift */,
+				2CACED8F2A36F77500FBD1C4 /* DallEViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -165,6 +180,7 @@
 				2CACED592A34C54700FBD1C4 /* Assets.xcassets */,
 				2CACED552A34C54700FBD1C4 /* ChatGPT_Dall_EApp.swift */,
 				2CACED8D2A36EAC900FBD1C4 /* Constants.swift */,
+				2C789E082A382774006E8E5B /* How to Fetch API.md */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -173,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				2CACED892A34D2D300FBD1C4 /* Message.swift */,
+				2C789E192A3A28B2006E8E5B /* ChatLogManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,10 +328,15 @@
 				2CACED562A34C54700FBD1C4 /* ChatGPT_Dall_EApp.swift in Sources */,
 				2CACED842A34C6C700FBD1C4 /* ChatGPTView.swift in Sources */,
 				2CACED8A2A34D2D300FBD1C4 /* Message.swift in Sources */,
+				2CACED902A36F77500FBD1C4 /* DallEViewViewModel.swift in Sources */,
 				2CACED862A34C6D200FBD1C4 /* DallEView.swift in Sources */,
+				2C55FCAF2A3B4018002B319C /* PromptMakerViewViewModel.swift in Sources */,
+				2C55FCB12A3B443F002B319C /* PromptMakerView.swift in Sources */,
 				2CACED8C2A34D48700FBD1C4 /* MessageView.swift in Sources */,
 				2CACED882A34C82400FBD1C4 /* ChatGPTViewViewModel.swift in Sources */,
+				2C55FCAB2A3B3F93002B319C /* DallEMessageView.swift in Sources */,
 				2CACED8E2A36EAC900FBD1C4 /* Constants.swift in Sources */,
+				2C789E1A2A3A28B2006E8E5B /* ChatLogManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

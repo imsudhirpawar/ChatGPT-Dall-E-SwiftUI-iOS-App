@@ -7,56 +7,11 @@
 
     import SwiftUI
 
-    //struct ChatGPTView: View {
-    //
-    //    @StateObject var viewModel = ChatGPTViewViewModel()
-    //
-    //    var body: some View {
-    //        NavigationView{
-    //            VStack{
-    //                ScrollView{
-    //                    VStack(spacing: 10) {
-    //
-    //                        ForEach(viewModel.chatLog, id: \.id) { message in
-    //                            MessageView(message: message)
-    //                        }
-    //                    }
-    //                }
-    //                HStack{
-    //                    TextField("Ask Me Anything", text: $viewModel.message)
-    //                        .textFieldStyle(.roundedBorder)
-    //
-    //                    Button {
-    //                        viewModel.sendMessage()
-    //                    }label: {
-    //
-    //
-    //                        Text("Send")
-    //                            .fontWidth(.standard)
-    //
-    //
-    //                    }
-    //
-    //                }
-    //                .padding()
-    //            }
-    //
-    //
-    //        }
-    //
-    //    }
-    //    @ViewBuilder
-    //    var EpamAssistView: some View{
-    //        Text("Welcome to EPAM Assistant!")
-    //            .font(.title)
-    //            .bold()
-    //    }
-    //}
-
     struct ChatGPTView: View {
         @StateObject var viewModel = ChatGPTViewViewModel()
         @State private var showEpamAssistView = true
         @State private var num = 0
+        @State var showAnimation = true
         
 
 
@@ -77,7 +32,6 @@
                    }
                  InputView
                 }
-//                .padding(.top)
              }
          }
         
@@ -98,7 +52,6 @@
                     .scaleEffect(showEpamAssistView ? 0.5 : 1.0)
                     .animation(.easeInOut) // Add animation modifier to the image
                     .padding(.top, 0)
-
                 
                     Text(viewModel.animatedText)
                         .font(.title)
@@ -143,6 +96,7 @@
                     showEpamAssistView = false
                     
                 } ) {
+                    
                     Image(systemName: "arrow.up.circle.fill")
                         .resizable()
                         .frame(width: 30, height: 30)
