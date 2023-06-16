@@ -14,10 +14,12 @@ struct DallEView: View {
     
     @StateObject var viewModel2 = PromptMakerViewViewModel()
     
- 
+ @StateObject var viewModel = ChatGPTViewViewModel()
+    @State private var showEpamAssistView = true
     @State private var showingPopover = false
     @State private var text = ""
     @State private var subject = ""
+    @State private var num = 0
 
    
    
@@ -26,8 +28,20 @@ struct DallEView: View {
         
         NavigationView {
             VStack{
+                ZStack {
+                    if showEpamAssistView{
+                        AssistantView
+                            .onAppear {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                     num = 1
+                                }
+                            }
+                    } else {
+                        ChatView
+                    }
+                }
                 
-                ChatView
+                
                 InputView
             }
         }
@@ -36,6 +50,42 @@ struct DallEView: View {
     
     
     @ViewBuilder
+    
+    var AssistantView: some View{
+        var text: String {
+            num == 0 ? "Welcome to Epam Text to Image generation tool. Write a subject you are thinking of and see the magic..." : ""
+        }
+        
+        
+        VStack {
+//            Spacer()
+            
+            Image("EpamConnect")
+                .resizable()
+                .frame(width: 150, height: 150)
+                .scaleEffect(showEpamAssistView ? 0.5 : 1.0)
+                .animation(.easeInOut) // Add animation modifier to the image
+                .padding(.top, 90)
+            
+                Text(viewModel.animatedText)
+                    .font(.title)
+                    .bold()
+                    .fontDesign(.rounded)
+                    .foregroundColor(.indigo)
+                    
+                    .onAppear {
+                        viewModel.animateText(text: text)
+                        
+                    }
+                    .background(Color.orange.blur(radius: 70))
+                    .padding()
+            
+            
+            Spacer()
+        }
+    }
+    
+    
     var ChatView: some View{
         ScrollView {
             VStack(spacing: 35) {
@@ -48,7 +98,7 @@ struct DallEView: View {
     
     var InputView: some View{
         HStack {
-            TextField("Message", text: $viewModel2.message)
+            TextField("Subject", text: $viewModel2.message)
                 .padding(10)
                 .background(
                     RoundedRectangle(cornerRadius: 50)
@@ -60,6 +110,7 @@ struct DallEView: View {
             Button(action:{
                 viewModel2.findPrompt()
                 showingPopover = true
+                showEpamAssistView = false
             } ) {
                 Image(systemName: "arrow.up.circle.fill")
                     .resizable()
